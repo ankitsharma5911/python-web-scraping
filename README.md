@@ -2,6 +2,8 @@
 
 This project is a Python-based web scraper for collecting job listings and descriptions from **naukri.com** and **jobleads.com**, storing them in a PostgreSQL database. Selenium and BeautifulSoup are used for scraping, and psycopg2 for database operations.
 
+**Approach Overview:** The scraper first gathers job summary data (title, company, location, salary, URL) from multiple pages of each job board using BeautifulSoup for efficient static content parsing. Then, it employs Selenium to navigate to each job's individual page and extract the full job description, handling dynamic content loading. Finally, all extracted data is stored in a PostgreSQL database, with measures taken to avoid duplicate entries.
+
 ---
 
 ## Features
